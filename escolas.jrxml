@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="escolas" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f697b5c1-25aa-42d8-9737-e0b9715ba6d2">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ProjetoAlimentacao Data Adapter "/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w1" value="348"/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w2" value="641"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT db_alimentacao.tbl_escola_programa.qtd_aluno,
+	db_alimentacao.tbl_escolas.nome,
+	db_alimentacao.tbl_programa.nome AS pnome
+FROM db_alimentacao.tbl_escola_programa
+	INNER JOIN db_alimentacao.tbl_escolas ON 
+	 db_alimentacao.tbl_escola_programa.escola_id_escola = db_alimentacao.tbl_escolas.id_escola 
+	INNER JOIN db_alimentacao.tbl_programa ON 
+	 db_alimentacao.tbl_escola_programa.programa_id_programa = db_alimentacao.tbl_programa.id_programa 
+ORDER BY db_alimentacao.tbl_escolas.nome ASC]]>
+	</queryString>
+	<field name="qtd_aluno" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="qtd_aluno"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbl_escola_programa"/>
+	</field>
+	<field name="nome" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="nome"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbl_escolas"/>
+	</field>
+	<field name="pnome" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="pnome"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbl_programa"/>
+	</field>
+	<group name="Group1">
+		<groupExpression><![CDATA[$F{nome}]]></groupExpression>
+	</group>
+	<group name="Group2">
+		<groupExpression><![CDATA[$F{nome}]]></groupExpression>
+		<groupHeader>
+			<band height="34">
+				<textField isStretchWithOverflow="true">
+					<reportElement x="0" y="0" width="555" height="34" uuid="4ba1f18e-befc-4b39-91bb-e325084cd648">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="57e4384f-659e-4cd9-9e11-16e66aa88a9c"/>
+					</reportElement>
+					<textElement verticalAlignment="Middle">
+						<font size="14" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<background>
+		<band height="16"/>
+	</background>
+	<title>
+		<band height="90">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="110" backcolor="#FFFFFF" uuid="d131a434-509c-44ce-ade3-438d79a20392"/>
+				<staticText>
+					<reportElement x="0" y="60" width="595" height="20" forecolor="#080808" uuid="d48d1924-3ab1-4ca1-86aa-a77d75b1254f"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[SECRETARIA DE EDUCAÇÃO, CIÊNCIA, TECNOLOGIA E INOVAÇÃO]]></text>
+				</staticText>
+				<image hAlign="Center">
+					<reportElement x="0" y="12" width="595" height="48" uuid="1192e666-f07c-4429-8935-2e1d5d2afb9b"/>
+					<imageExpression><![CDATA["C:/Users/TI01/eclipse-workspace/projetoAlimentacao/src/main/webapp/resources/img/logo-secti-qxb.png"]]></imageExpression>
+				</image>
+				<staticText>
+					<reportElement x="0" y="79" width="595" height="19" forecolor="#000000" uuid="10992143-38a9-4bcd-8a9e-bce358577b96"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[GERÊNCIA DA ALIMENTAÇÃO ESCOLAR]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="110" width="595" height="20" forecolor="#000000" uuid="b49f2f38-a4a7-439c-bf23-1db13965fa15"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="14" isBold="true"/>
+					</textElement>
+					<text><![CDATA[RELATÓRIO DE ESCOLAS]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="23"/>
+	</pageHeader>
+	<detail>
+		<band height="21">
+			<textField>
+				<reportElement x="80" y="0" width="100" height="20" uuid="70a4678e-7fad-403c-a28c-435ff26c32de">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e96cf1eb-5bab-4913-9acc-317059f601b6"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pnome}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="180" y="0" width="80" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="281f69f8-78e3-4d7e-99b0-1a175e9a9a5d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e3a9b8b5-7ac8-4a5b-b95c-bbcd64930d3c"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[QTD. ALUNOS:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="260" y="0" width="75" height="20" uuid="366bebb3-4eb4-4d0b-8329-7c921ad0d37e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e3a9b8b5-7ac8-4a5b-b95c-bbcd64930d3c"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{qtd_aluno}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="80" height="20" forecolor="#080808" backcolor="#FFFFFF" uuid="2e47b64a-7b86-4e8b-9b98-68fe4bb692e4">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="57e4384f-659e-4cd9-9e11-16e66aa88a9c"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[PROGRAMA:]]></text>
+			</staticText>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="20" width="555" height="1" forecolor="#E3E3E3" uuid="f20b982f-3d06-47e7-872b-e4f4b0a2fb75"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" uuid="1b54da0b-858b-4710-809a-a394cba7c3f5"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Página "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="c1e2257b-6c57-4940-8cd6-204bcb3c4c9e"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="4" width="100" height="13" uuid="6ca10d91-e61d-4b61-9096-f0b5feb4b188"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>
