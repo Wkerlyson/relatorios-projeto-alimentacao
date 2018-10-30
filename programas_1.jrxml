@@ -31,7 +31,7 @@ ORDER BY db_alimentacao.tbl_programa.nome ASC]]>
 	<pageHeader>
 		<band height="54" splitType="Stretch">
 			<staticText>
-				<reportElement x="-1" y="0" width="556" height="27" uuid="31b164b4-8901-441a-bfc2-f5f5d76b5a67"/>
+				<reportElement x="4" y="3" width="556" height="27" uuid="31b164b4-8901-441a-bfc2-f5f5d76b5a67"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="18" isBold="true" isUnderline="true"/>
 				</textElement>

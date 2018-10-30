@@ -20,4 +20,26 @@
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>net.sf.jasperreports.nature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>produtos_1.jasper</name>
+			<type>1</type>
+			<location>C:/Users/TI01/Downloads/produtos.jasper</location>
+		</link>
+		<link>
+			<name>programas_1.jasper</name>
+			<type>1</type>
+			<location>C:/Users/TI01/eclipse-workspace/projetoAlimentacao/src/main/webapp/reports/programas.jasper</location>
+		</link>
+		<link>
+			<name>relatorio-programa_1.jasper</name>
+			<type>1</type>
+			<location>C:/Users/TI01/eclipse-workspace/projetoAlimentacao/src/main/webapp/reports/relatorio-programa.jasper</location>
+		</link>
+		<link>
+			<name>teste_1.jasper</name>
+			<type>1</type>
+			<location>C:/Users/TI01/eclipse-workspace/projetoAlimentacao/src/main/webapp/reports/teste.jasper</location>
+		</link>
+	</linkedResources>
 </projectDescription>

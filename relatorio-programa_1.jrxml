@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="relatorio-programa" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="970f0888-bf4f-4442-a122-403f6a63e778">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="nome" class="java.lang.String"/>
+	<field name="recurso" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="130" splitType="Stretch">
+			<image hAlign="Center">
+				<reportElement x="0" y="12" width="555" height="48" uuid="f899d079-8630-49b2-8216-739660f0a6bb"/>
+				<imageExpression><![CDATA["C:/Users/TI01/eclipse-workspace/projetoAlimentacao/src/main/webapp/resources/img/logo-secti-qxb.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="0" y="60" width="555" height="20" forecolor="#080808" uuid="06b4c2cc-c507-4081-b5e0-c9f9b37aa07d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SECRETARIA DE EDUCAÇÃO, CIÊNCIA, TECNOLOGIA E INOVAÇÃO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="79" width="555" height="19" forecolor="#000000" uuid="9a1a8750-0c21-4c07-8a82-f4ed6d9ed717"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[GERÊNCIA DA ALIMENTAÇÃO ESCOLAR]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="32" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="20" forecolor="#000000" uuid="d5bc5732-3a01-4792-90e8-24b493ec576d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RELATÓRIO DE PROGRAMAS]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="18" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="278" height="18" forecolor="#2E2E2E" backcolor="#DEDEDE" uuid="abc84340-6ade-49ee-b6ad-78745ad1d311"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#B5B5B5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[NOME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="278" y="0" width="277" height="18" forecolor="#2E2E2E" backcolor="#DEDEDE" uuid="e2de6d56-2109-426b-8ddd-881a8962ad54"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#B5B5B5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[RECURSO]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="278" height="20" uuid="1b0eb8c7-c2b3-4aef-92a2-f86405bc1c75">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="02f1e79c-fc39-41ec-9be4-eb73a707f680"/>
+				</reportElement>
+				<box>
+					<leftPen lineWidth="1.0" lineColor="#B5B5B5"/>
+					<bottomPen lineWidth="1.0" lineColor="#B5B5B5"/>
+					<rightPen lineWidth="1.0" lineColor="#B5B5B5"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="278" y="0" width="277" height="20" uuid="db34e4d0-9894-4e74-835d-afc20599f8ea">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d899b541-5a55-4d92-a18a-a4776cfd3c59"/>
+				</reportElement>
+				<box>
+					<leftPen lineWidth="1.0" lineColor="#B5B5B5"/>
+					<bottomPen lineWidth="1.0" lineColor="#B5B5B5"/>
+					<rightPen lineWidth="1.0" lineColor="#B5B5B5"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{recurso}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+</jasperReport>
